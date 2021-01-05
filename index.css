@@ -1,0 +1,39 @@
+:root{
+    --shadow: #363636;
+    --biroblue: #51637a;
+    --mole: #745b57;
+    --viget: #f0f0f0;
+    --lightgrey: #ccc;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: var(--shadow);
+}
+
+.background{
+    background: var(--shadow);
+    position: relative;
+    width: 100%;
+}
+
+svg{
+    fill: var(--viget);
+}
+
+.outer-circumference{ 
+    position: absolute;
+    left: 10%;
+}
+
+.inner-circumference{
+    position: absolute;
+    left: 9.6%;
+}
+
+.innermost-circumference{
+    position: absolute;
+    left: 9.8%;
+}
