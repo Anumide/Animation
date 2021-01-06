@@ -11,29 +11,135 @@ body{
     padding: 0;
     width: 100%;
     background: var(--shadow);
-}
-
-.background{
-    background: var(--shadow);
-    position: relative;
-    width: 100%;
+    background-size: cover;
 }
 
 svg{
     fill: var(--viget);
 }
 
-.outer-circumference{ 
+ .outer-circumference{
+    display: block;
+    width: 100%; 
     position: absolute;
-    left: 10%;
+    left: -9%;
+    top: 0;
+    -webkit-animation: Outer-circumference 5s linear infinite;
+    -moz-animation: Outer-circumference 5s linear infinite;
+    animation: Outer-circumference 5s linear infinite;
 }
 
 .inner-circumference{
+    display: block;
     position: absolute;
-    left: 9.6%;
+    width: 60%;
+    left: 7%;
+    top: 2.5%; 
+    animation: Inner-circumference 5s linear infinite;
+    -webkit-animation: Inner-circumference 5s linear infinite;
+    -moz-animation: Inner-circumference 5s linear infinite;
 }
 
-.innermost-circumference{
+.outside{
+    display: block;
+    border: var(--viget) 3px dashed;
+    width: 50%;
+    border-radius: 50%;
+    margin: 20% auto;
+    height: 200px;
+    animation: Outer-circumference 5s linear infinite;
+}
+
+.setting{
     position: absolute;
-    left: 9.8%;
+    width: 10%;
+}
+
+.one{
+    bottom: 3%;
+    right: 20.5%;
+    animation: antiroll  2s 0.5s linear infinite;
+}
+
+.two{
+    bottom: 6%;
+    right: 13.5%;
+    animation: roll 2s 0.5s linear infinite;
+}
+
+.three{
+    bottom: 3%;
+    right: 6.5%;
+    animation: antiroll 2s 0.5s linear infinite;
+}
+
+
+
+
+
+@-webkit-keyframes Outer-circumference{
+    100%{
+        transform: rotate(1turn)
+        translateZ(0); 
+    }
+}
+
+@-moz-keyframes Outer-circumference{
+    100%{
+        transform: rotate(1turn)
+        translateZ(0); 
+    }
+}
+
+@keyframes Outer-circumference{
+    100%{
+        transform: rotate(1turn)
+        translateZ(0); 
+    }
+}
+
+@-webkit-keyframes Inner-circumference{
+    100% {
+        transform: rotate(-360deg)
+        translateZ(0); 
+    }
+}
+
+@-moz-keyframes Inner-circumference{
+    100% {
+        transform: rotate(-360deg)
+        translateZ(0); 
+    }
+}
+
+@keyframes Inner-circumference{
+    100% {
+        transform: rotate(-360deg)
+        translateZ(0); 
+    }
+}
+
+@-webkit-keyframes roll{
+    100%{ transform: rotate(1turn);}
+}
+
+@-moz-keyframes roll{
+    100%{transform: rotate(1turn);}
+}
+
+@keyframes roll{
+    100%{transform: rotate(1turn);}
+}
+
+
+@-webkit-keyframes antiroll{
+    100%{ transform: rotate(-360deg);}
+}
+
+@-moz-keyframes antiroll{
+    100%{transform: rotate(-360deg);}
+}
+
+@keyframes antiroll{
+    100%{transform: rotate(-360deg);}
 }
